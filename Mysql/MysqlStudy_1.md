@@ -48,22 +48,6 @@
 
 >>10. 서울지역만 따로 추출하여  post_seoul  테이블을 생성한다.
 
-1) 전체카피
-
-	create table post2  AS  select  *  from post;
-
-2) 부분카피
-
-	create table  post3_seoul as 
-	
-	select distinct( a3 ) from  post where a2 like '%서울%';
-3) 테이블 구조만
-
-	create table test1 select * from post where a1=1000;
-	
-	where a1=1000; 조건이 맞지않으면 구조만create table post2  as select * from post;
-
-
 
 (ex)
 	create table post2 as select * from post;
