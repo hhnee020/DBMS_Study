@@ -1,23 +1,40 @@
 1. 데이터 기본 출력
 
    (1) 각 테이블의 구조를 출력한다.
+    
      desc emp;
+   
    (2) 각 테이블의 전체 데이터를 출력한다.
+    
     select * from emp;
+   
    (3) 10번 부서에서 근무하는 사원들을 출력한다.
+    
     select * from emp where deptno=10;
+   
    (4) 급여가 1500 이상인 직원들을 출력한다.
+    
     select * from emp where sal >= 1500;
+    
     select * from emp where sal > 1500 or sal = 1500;
+   
    (5) 급여가 1500인 경우 어떤 등급에 속하는지 출력한다. - 급여 등급테이블 조회 -
+    
     select * from salgrade where losal <= 1500 and hisal >= 1500;
+   
    (6) 사원테이블에서 매니저 값이 NULL로 되어있는 사원을 출력한다.
+    
     select * from emp where mgr is null;
+   
    (7) 사원이름을 출력하는데 앞 2자리만 노출하고 나머지는 * 처리를 한다. 예)AD***
+    
     select ename from emp;
     select substr(ename,1,2)||'**'   from emp;
+    
     select rpad('ab',7,'*') from dual;
+    
     select rpad( substr(ename,1,2),length(ename),'*' ) from emp;
+    
     select rownum,empno,ename,sal from emp where rownum<=5
 
 ※ 사원 테이블에 행번호 붙여 출력한다.
