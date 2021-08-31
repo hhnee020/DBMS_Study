@@ -29,6 +29,7 @@
    (7) 사원이름을 출력하는데 앞 2자리만 노출하고 나머지는 * 처리를 한다. 예)AD***
     
     -select ename from emp;
+    
     -select substr(ename,1,2)||'**'   from emp;
     
     -select rpad('ab',7,'*') from dual;
